@@ -1,7 +1,6 @@
 <html>
 <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <?php include 'head.php';?>
 </head>
 <body>
 
@@ -20,16 +19,12 @@
             Liste des vidéos
             <ul>
                 <li>
-                    <a href="videos-1.html" class="btn btn-primary">vidéo 1</a>
+                    <a href="videos-1.php" class="btn btn-primary">vidéo 1</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+<?php include 'footer.php';?>
 </body>
 </html>

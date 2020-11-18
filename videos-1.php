@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-sm-12 col-lg-8">
             <video controls width="560" height="315">
-                <source src="2020-10-28_20-54-06.mkv" type="video/mp4"/>
+                <source src="videos/2020-10-28_20-54-06.mkv" type="video/mp4"/>
             </video>
         </div>
         <div class="col-sm-12 col-lg-4">Liste des vidéos</div>

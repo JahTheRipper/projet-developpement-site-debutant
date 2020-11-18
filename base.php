@@ -21,7 +21,7 @@ $char = '-';
 
 // String
 $string = 'L\'amour \\ :)';
-$string = '';
+$string = 'video1.mkv, video2.mkv, video3.mkv';
 
 
 // null
@@ -34,9 +34,9 @@ $bool = false;
 // array
 $array = [];
 $array = [
-    8,
-    'test',
-    null,
+    'video1.mkv',
+    'video2.mkv',
+    'video3.mkv',
     true,
     'dzuhauhaidgbaz ',
 ];

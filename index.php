@@ -1,3 +1,4 @@
+<?php include 'function.php';?>
 <html>
 <head>
     <?php include 'head.php';?>
@@ -17,11 +18,7 @@
         </div>
         <div class="col-sm-12 col-lg-4">
             Liste des vidéos
-            <ul>
-                <li>
-                    <a href="videos-1.php" class="btn btn-primary">vidéo 1</a>
-                </li>
-            </ul>
+            <?php include 'list-videos.php'; ?>
         </div>
     </div>
 </div>

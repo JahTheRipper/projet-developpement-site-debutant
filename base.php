@@ -57,6 +57,7 @@ $secondNumber = 23;
 $firstNumber = $firstNumber + 1;
 $firstNumber += 1;
 $firstNumber++;
+++$firstNumber;
 
 $result = add($firstNumber, $secondNumber);
 $result = $firstNumber - $secondNumber;

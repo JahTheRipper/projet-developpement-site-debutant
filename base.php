@@ -40,6 +40,17 @@ $array = [
     true,
     'dzuhauhaidgbaz ',
 ];
+echo $array[3]; // ==> true
+echo $array[4]; // ==> dzuhauhaidgbaz
+
+$array = [
+    'ma_clé' => 5,
+    'voila' => 'enfiehzuehfzfe,',
+    12 => 'ok',
+    27 => 8,
+];
+echo $array[27]; // ==> 8
+echo $array['ma_clé']; // => 5
 
 //Int
 $myVar = 8;

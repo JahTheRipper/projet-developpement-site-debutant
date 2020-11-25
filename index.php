@@ -1,4 +1,5 @@
 <?php include 'function.php';?>
+<?php include 'db.php';?>
 <html>
 <head>
     <?php include 'head.php';?>

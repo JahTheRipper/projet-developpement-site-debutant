@@ -5,6 +5,9 @@
     <?php include 'head.php';?>
 </head>
 <body>
+<?php
+    printEvenNumbers((int) $_GET['start'], (int) $_GET['end'] );
+?>
 
 <h1>Plateforme vidéo tuto</h1>
 <p class="text-center">Bienvenue à toi sur cette plateforme où tu pourras retrouver toutes les vidéos necessaires à

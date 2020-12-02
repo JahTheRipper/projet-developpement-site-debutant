@@ -49,8 +49,8 @@ $array = [
     12 => 'ok',
     27 => 8,
 ];
-echo $array[27]; // ==> 8
-echo $array['ma_clé']; // => 5
+echo $array[27]; // ==> affiche 8
+echo $array['ma_clé']; // => affiche 5
 
 //Int
 $myVar = 8;

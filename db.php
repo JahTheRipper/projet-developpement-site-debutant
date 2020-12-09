@@ -13,3 +13,19 @@ function get_videos() :array
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function get_video(int $id): ?array
+{
+    $dbh = get_db_connection();
+    $stmt = $dbh->prepare('SELECT * FROM `video` WHERE id = :id LIMIT 1;');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($result === false)
+    {
+        return null;
+    }
+    return $result;
+}

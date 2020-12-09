@@ -3,7 +3,7 @@
 // https://www.twitch.tv/jahtheripper
 // https://www.youtube.com?watch=dzezf54zg6e864ef864grez684gre564gre56&watchSec=25
 // https://localhost/projet-developpement-site-debutant/?search=jahtheripper&site=twitch.tv
-//var_dump($_GET);
+var_dump($_GET);
 /*
 $_GET = [
   'search' => 'jahtheripper',

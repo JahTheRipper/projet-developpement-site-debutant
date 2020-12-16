@@ -78,6 +78,10 @@ $result = $firstNumber / $secondNumber; // 2.154874887484
 $result = $firstNumber % $secondNumber; // 1
 
 
+$text = 'Salut';
+$text = $text . ' JahTheRipper';
+$text .= ' JahTheRipper';
+
 $username = 'JahTheRipper';
 
 echo 'Salut '.$username.' !';
@@ -100,8 +104,59 @@ function substract(int $a, int $b): ?int {
     return $a - $b;
 }
 
+function printEvenNumbers(int $start, int $end): void
+{
+    $found = false;
+    for ($i = $start; $i <= $end; ++$i) {
+        if ($i % 2 === 0) {
+            if ($found === true) {
+                echo ' - ';
+            } else {
+                $found = true;
+            }
+
+            echo $i;
+        }
+    }
+}
+
 $additionResult = add(5, 12);
 
 for ($i = 8; $i < 10; $i++) {
     echo $i;
+}
+
+
+
+$url = '/?video=3';
+
+$_GET['video'] = '3';
+$videos = [
+    [
+        'name' => 'vidéo 1',
+        'id' => '1',
+    ],
+    [
+        'name' => 'vidéo 2',
+        'id' => '2',
+    ],
+    [
+        'name' => 'vidéo 3',
+        'id' => '3',
+    ],
+    [
+        'name' => 'vidéo 4',
+        'id' => '4',
+    ],
+];
+
+foreach ($videos as $video) {
+    // $_GET['video'] = '3';
+    // $video['id'] => '1';
+    // $_GET['video'] = '3';
+    // $video['id'] => '2';
+    // $_GET['video'] = '3';
+    // $video['id'] => '3';
+    // $_GET['video'] = '3';
+    // $video['id'] => '4';
 }

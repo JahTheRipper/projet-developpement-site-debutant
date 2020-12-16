@@ -5,7 +5,13 @@ $videos = get_videos();
 <ul>
     <?php foreach ($videos as $video): ?>
         <li>
-            <a href="videos-1.php" class="btn btn-primary">
+            <?php
+            $linkClasses = 'btn btn-primary';
+            if (is_video_asked() && $_GET['video'] === $video['id']) {
+                $linkClasses .= ' active';
+            }
+            ?>
+            <a href="?video=<?php echo $video['id']; ?>" class="<?php echo $linkClasses; ?>">
                 <?php echo $video['name']; ?>
             </a>
         </li>

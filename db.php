@@ -29,3 +29,18 @@ function get_video(int $id): ?array
     }
     return $result;
 }
+
+function get_user_by_email(string $email): ?array
+{
+    $databaseHandler = get_db_connection();
+    $statement = $databaseHandler->prepare('SELECT * FROM admin_user WHERE email LIKE :email;');
+    $statement->bindParam(':email', $email);
+    $statement->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if ($result === false)
+    {
+        return null;
+    }
+    return $result;
+}

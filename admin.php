@@ -1,15 +1,24 @@
-<?php include 'function.php';?>
-<?php include 'db.php';?>
 <?php
-//récupérer l'email
-$email = $_POST['email'];
-// Récupérer l'utilisateur ayant potentiellement cet email en base
-$user = get_user_by_email($email);
-//vérifier si l'utilisateur avec cet email existe
-if ($user !== null) {
-    //si oui, vérifier la similitude du mot de passe
-    $password = $_POST['password']; // password contient le MDP envoyé ==> "admin"
-    $userHashedPassword = $user['password']; // 'password' correspond au nom du champs de la table admin_user ==> "$2a$12$S.Bm.J9jm4QQK.OHKMlq2.wUnyi/6l4uPe1unLbrxbE1aFfWMghN6"
+
+session_start();
+
+include 'function.php';
+include 'db.php';
+
+if (array_key_exists('abcdef', $_GET)) {
+    logout();
+}
+
+if (!empty($_POST['email'])) {
+    //récupérer l'email
+    $email = $_POST['email'];
+    // Récupérer l'utilisateur ayant potentiellement cet email en base
+    $user = get_user_by_email($email);
+    //vérifier si l'utilisateur avec cet email existe
+    if ($user !== null) {
+        //si oui, vérifier la similitude du mot de passe
+        $password = $_POST['password']; // password contient le MDP envoyé ==> "admin"
+        $userHashedPassword = $user['password']; // 'password' correspond au nom du champs de la table admin_user ==> "$2a$12$S.Bm.J9jm4QQK.OHKMlq2.wUnyi/6l4uPe1unLbrxbE1aFfWMghN6"
 
     if (password_verify($password, $userHashedPassword)) {
         echo 'Vous êtes connecté !';
